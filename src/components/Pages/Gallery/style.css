@@ -40,9 +40,74 @@
   font-weight: 600;
 }
 
-#gallery p {
-  font-size: clamp(1rem, 1rem + 6.8966vw, 3rem);
+#gallery h3 {
   font-family: "Tertius Sans Italic", Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 1rem + 6.8966vw, 4rem);
+}
+
+#gallery p {
+  font-family: "Tertius Sans Normal", Helvetica, Arial, sans-serif;
   color: var(--black);
   font-weight: 600;
+  text-align: center;
+}
+
+
+/* ---------------------horizontal scroll gallery------------------------------------ */
+.sidebar {
+  width: 100vh;
+  height: max-content;
+  display: flex;
+  align-items: flex-start;
+  transform: rotate(-90deg) translate(-100%, 0);
+  transform-origin: left top;
+  padding: 1.5em 3em;
+  font-size: clamp(1rem, 1rem + 6.8966vw, 5rem);
+}
+
+.sidebar>div:nth-child(1) {
+  flex: 2;
+}
+
+.sidebar>div:nth-child(2) {
+  flex: 2;
+}
+
+.slider-wrapper {
+  position: relative;
+  top: 0;
+  width: 8000px;
+  padding: 0 10vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.slide {
+  width: 50%;
+  height: 860px;
+}
+
+.meet-txt {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery .slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.line {
+  overflow: hidden;
+}
+
+.line-wrapper {
+  overflow: hidden;
+  line-height: 15px;
 }
