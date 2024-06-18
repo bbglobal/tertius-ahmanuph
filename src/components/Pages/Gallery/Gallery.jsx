@@ -31,6 +31,7 @@ const Gallery = () => {
   const imgGal = useRef(null);
   const slider = useRef(null);
   const sliderWrapper = useRef(null);
+  const slidesRef = gsap.utils.selector(sliderWrapper);
 
   let imageReveal = CSSRulePlugin.getRule(".imageContainer:after");
 
@@ -114,7 +115,6 @@ const Gallery = () => {
   // }, []);
 
   useGSAP(() => {
-
     SplitType.create(meet.current);
     SplitType.create(owner.current);
 
@@ -157,8 +157,8 @@ const Gallery = () => {
       stagger: 0.05,
       ease: Expo.easeOut,
       duration: 1.5,
-      delay: .5
-    },);
+      delay: 0.5,
+    });
 
     gsap.to("h2 .char", {
       yPercent: 0,
@@ -166,8 +166,8 @@ const Gallery = () => {
       stagger: 0.05,
       ease: Expo.easeOut,
       duration: 1.5,
-      delay: .5
-    },);
+      delay: 0.5,
+    });
 
     gsap.to(".lines", {
       yPercent: 0,
@@ -175,9 +175,22 @@ const Gallery = () => {
       stagger: 0.05,
       ease: Expo.easeOut,
       duration: 1.5,
-      delay: .5
-    },);
-  }, [])
+      delay: 0.5,
+    });
+
+    slidesRef(".slide").forEach((slide) => {
+      gsap.to(slide, {
+        scrollTrigger: {
+          trigger: slide,
+          start: "left 70%",
+          // markers: true,
+        },
+        scale: 1,
+        duration: 1.7,
+        ease: Expo.easeOut,
+      });
+    });
+  }, []);
 
   return (
     // <main id="gallery">
@@ -298,40 +311,55 @@ const Gallery = () => {
 
     <main id="gallery">
       <Container fluid>
-
         <div className="slider" ref={slider}>
           <div className="slider-wrapper" ref={sliderWrapper}>
-
             <div className="slide">
               <img src={gallaryImgOne} alt="image" />
             </div>
 
             <div className="slide meet-txt">
               <h3 ref={meet}>Meet</h3>
-              <h2 ref={owner}>
-                SHADERAH Dey-Al
-              </h2>
+              <h2 ref={owner}>SHADERAH Dey-Al</h2>
               <p ref={about}>
                 <div className="line-wrapper">
                   <div className="lines">
-                    A pop and r&b artist with a fresh and creative approach to making music with a deeper meaning.
+                    A pop and r&b artist with a fresh and creative approach to
+                    making
                   </div>
                 </div>
 
                 <div className="line-wrapper">
                   <div className="lines">
-                    Surface level artistry is a thing of the past when this artists masterpieces enter the conversation. As
+                    music with a deeper meaning. Surface level artistry is a
+                    thing of
                   </div>
                 </div>
 
                 <div className="line-wrapper">
                   <div className="lines">
-                    the founder of Third Dim9nsion, Shadera is also well versed in both the artistic and creative side of
+                    the past when this artists masterpieces enter the
+                    conversation. As
                   </div>
                 </div>
 
                 <div className="line-wrapper">
-                  <div className="lines"> music business, which fuels her passion to help as many other artist as possible.</div>
+                  <div className="lines">
+                    the founder of Third Dim9nsion, Shadera is also well versed
+                    in{" "}
+                  </div>
+                </div>
+
+                <div className="line-wrapper">
+                  <div className="lines">
+                    both the artistic and creative side of music business, which
+                    fuels{" "}
+                  </div>
+                </div>
+
+                <div className="line-wrapper">
+                  <div className="lines">
+                    her passion to help as many other artist as possible.
+                  </div>
                 </div>
               </p>
             </div>
@@ -367,10 +395,8 @@ const Gallery = () => {
             <div className="slide">
               <img src={gallaryImgSeven} alt="image" />
             </div>
-
           </div>
         </div>
-
       </Container>
     </main>
   );
