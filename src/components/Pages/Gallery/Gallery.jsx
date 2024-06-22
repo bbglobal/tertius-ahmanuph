@@ -32,40 +32,14 @@ const Gallery = () => {
   const owner = useRef(null);
   const about = useRef(null);
 
-  SplitType.create(meet.current)
-  SplitType.create(owner.current)
+  SplitType.create(meet.current);
+  SplitType.create(owner.current);
 
   const galleryHero = useRef(null);
   const galleryWrapper = useRef(null);
-  const galleryListImg = gsap.utils.toArray(".gallery-visual-item");
 
   useGSAP(() => {
-
-    gsap.set(".gallery-visual-item", {
-      scale: 0
-    })
-
-    gsap.set(".char", {
-      yPercent: 100,
-    })
-
-    gsap.set(".lines", {
-      yPercent: 100,
-    })
-
-    gsap.to(".char", {
-      yPercent: 0,
-      stagger: 0.05,
-      duration: 1.7,
-      ease: Expo.easeInOut
-    })
-
-    gsap.to(".lines", {
-      yPercent: 0,
-      stagger: 0.05,
-      duration: 1.7,
-      ease: Expo.easeInOut
-    })
+    const galleryListImg = gsap.utils.toArray(".gallery-visual-item");
 
     function getScrollAmount() {
       let sliderWidth = galleryHero.current.scrollWidth;
@@ -76,6 +50,32 @@ const Gallery = () => {
       x: getScrollAmount,
       duration: 3,
       ease: "none",
+    });
+
+    gsap.set(".gallery-visual-item", {
+      scale: 0,
+    });
+
+    gsap.set(".lines", {
+      yPercent: 100,
+    });
+
+    gsap.set(".char", {
+      yPercent: 100,
+    });
+
+    gsap.to(".char", {
+      yPercent: 0,
+      stagger: 0.05,
+      duration: 1.7,
+      ease: Expo.easeInOut,
+    });
+
+    gsap.to(".lines", {
+      yPercent: 0,
+      stagger: 0.05,
+      duration: 1.7,
+      ease: Expo.easeInOut,
     });
 
     ScrollTrigger.create({
@@ -89,7 +89,7 @@ const Gallery = () => {
     });
 
     galleryListImg.forEach((listImg) => {
-      let tl = gsap.timeline({
+      gsap.to(listImg, {
         scrollTrigger: {
           trigger: listImg,
           start: "left 100%",
@@ -97,9 +97,6 @@ const Gallery = () => {
           containerAnimation: tween,
           scrub: true,
         },
-      });
-
-      tl.to(listImg, {
         scale: 1,
         ease: Expo.easeOut,
       });
@@ -168,7 +165,6 @@ const Gallery = () => {
               <div className="gallery-visuals-section">
                 <div className="gallery-visual-list-wrapper">
                   <div className="gallery-visual-list">
-
                     <div className="gallery-visual-item">
                       <div className="gallery-img-wrapper">
                         <img
