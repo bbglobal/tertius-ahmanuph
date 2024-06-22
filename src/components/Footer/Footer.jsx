@@ -27,7 +27,7 @@ const Footer = () => {
                   placeholder="Email Address *"
                   className="outline-none text-xs email border-black border"
                 />
-                <button className="bg-black text-white btn-submit h-10 ms-2">
+                <button className="bg-white text-black btn-submit h-10 ms-2">
                   Submit
                 </button>
               </form>

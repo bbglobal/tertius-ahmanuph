@@ -3,26 +3,26 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5rem;
-  color: #000;
+  color: var(--white);
 }
 
 .cart-container {
   --tw-border-opacity: 1;
   border-left: solid;
-  border-left-color: #000;
-  border-left-color: rgba(0, 0, 0, var(--tw-border-opacity));
+  border-left-color: var(--white);
+  border-left-color: rgba(225, 225, 225, var(--tw-border-opacity));
   border-left-width: 1px;
   width: 40%;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 0.7s;
   transition-property: all;
-  --tw-shadow-color: #262626;
+  --tw-shadow-color: #f1f1f1;
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   --tw-shadow: var(--tw-shadow-colored);
-  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --tw-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.25);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)),
-    var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
-  color: #000;
+    var(--tw-ring-shadow, 0 0 var(--white)), var(--tw-shadow);
+  color: var(--white);
   padding-top: 10px;
   padding-bottom: 5rem;
   padding: 1.5rem;
@@ -123,8 +123,8 @@
   height: 7.5rem;
   margin-top: -0.125rem;
   --tw-text-opacity: 1;
-  color: #000;
-  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  color: var(--white);
+  color: rgba(225, 225, 225, var(--tw-text-opacity));
   font-weight: 600;
 }
 
@@ -137,8 +137,8 @@
   height: 7.5rem;
   margin-top: -0.125rem;
   --tw-text-opacity: 1;
-  color: #000;
-  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  color: var(--white);
+  color: rgba(225, 225, 225, var(--tw-text-opacity));
   font-weight: 600;
 }
 
@@ -148,8 +148,8 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   --tw-text-opacity: 1;
-  color: #000;
-  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  color: var(--white);
+  color: rgba(225, 225, 225, var(--tw-text-opacity));
 }
 
 .font-medium {
@@ -167,15 +167,18 @@
   line-height: 1.5rem;
   padding: 1.5rem;
   cursor: pointer;
+  background: var(--white);
+  color: var(--light-beige);
 }
 
 .btn-checkout:hover {
   background-color: #e5e5e5;
+  color: var(--light-beige);
 }
 
 .btn-checkout::after {
   content: "";
-  background-color: #000;
+  background-color: var(--light-beige);
   border-radius: 50%;
   height: 0.75rem;
   width: 0.75rem;

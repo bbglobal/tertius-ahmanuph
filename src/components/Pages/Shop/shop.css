@@ -1,7 +1,7 @@
 main#shop * {
   font-family: "Tertius Sans Normal", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  color: var(--black);
+  color: var(--white);
 }
 
 main#shop {
@@ -17,5 +17,5 @@ main#shop {
   padding-bottom: 3.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.5);
 }

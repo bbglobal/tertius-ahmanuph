@@ -14,6 +14,7 @@ import {
   PrivacyPolicy,
   Contact,
   FAQ,
+  Albums,
 } from "./components";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -22,9 +23,14 @@ import Lenis from "lenis";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
+  const [showAlbums, setShowAlbums] = useState(false);
 
   const closeCart = () => {
     setShowCart(false);
+  };
+
+  const closeAlbums = () => {
+    setShowAlbums(!showAlbums);
   };
 
   const lenis = new Lenis({
@@ -42,8 +48,9 @@ function App() {
   return (
     <>
       <Loader />
-      <Header toggleCart={() => setShowCart(!showCart)} />
+      <Header toggleCart={() => setShowCart(!showCart)} toggleAlbums={() => setShowAlbums(!showAlbums)}/>
       <Cart showCart={showCart} closeCart={closeCart} />
+      <Albums showAlbums={showAlbums} hideAlbums={closeAlbums}/>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />}></Route>

@@ -6,7 +6,8 @@
   padding-bottom: 3.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  border-bottom: 1px solid #00000080;
+  border-bottom: 1px solid #ffffff80;
+  color: var(--white);
 }
 
 .terms h2,
@@ -14,5 +15,5 @@
 .terms p {
   font-family: "Tertius Sans Normal", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  color: var(--black);
+  color: var(--white);
 }
