@@ -46,7 +46,7 @@
 }
 
 .section {
-  width: 8000px;
+  width: max-content;
   height: 80%;
 }
 
