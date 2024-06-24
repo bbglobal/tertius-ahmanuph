@@ -93,8 +93,13 @@ const Home = () => {
     <>
       <main id="home">
         <section ref={hero} id="hero-section" className="banner">
-
-          <video src={heroVedio} controls autoPlay loop className="hero-video"></video>
+          <video
+            src={heroVedio}
+            controls
+            autoPlay
+            loop
+            className="hero-video"
+          ></video>
 
           {/* <div className="hero-txt-container">
             <h1 ref={herotxt}>Tertius AhmaNuph</h1>
@@ -264,17 +269,23 @@ const Home = () => {
                       <ol>
                         <li>
                           “Get This Way” <br />
-                          consectetur iste maxime natus repellat ad recusandae laboriosam laborum nesciunt consequatur dolore quisquam dolores tenetur ab.
+                          consectetur iste maxime natus repellat ad recusandae
+                          laboriosam laborum nesciunt consequatur dolore
+                          quisquam dolores tenetur ab.
                         </li>
                         <br />
                         <li>
                           “3am On Jan 31st” <br />
-                          consectetur iste maxime natus repellat ad recusandae laboriosam laborum nesciunt consequatur dolore quisquam dolores tenetur ab.
+                          consectetur iste maxime natus repellat ad recusandae
+                          laboriosam laborum nesciunt consequatur dolore
+                          quisquam dolores tenetur ab.
                         </li>
                         <br />
                         <li>
                           “Lonely Homes” <br />
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolorem pariatur blanditiis? Velit molestiae,
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Aliquid dolorem pariatur blanditiis? Velit
+                          molestiae,
                         </li>
                       </ol>
                     </p>

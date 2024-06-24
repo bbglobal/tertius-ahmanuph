@@ -31,15 +31,13 @@ const Gallery = () => {
   const meet = useRef(null);
   const owner = useRef(null);
   const about = useRef(null);
-
-  SplitType.create(meet.current);
-  SplitType.create(owner.current);
-
   const galleryHero = useRef(null);
   const galleryWrapper = useRef(null);
 
+  
   useGSAP(() => {
-    const galleryListImg = gsap.utils.toArray(".gallery-visual-item");
+    const splitMeet = new SplitType(meet.current);
+    const splitOwner = new SplitType(owner.current);
 
     function getScrollAmount() {
       let sliderWidth = galleryHero.current.scrollWidth;
@@ -52,17 +50,9 @@ const Gallery = () => {
       ease: "none",
     });
 
-    gsap.set(".gallery-visual-item", {
-      scale: 0,
-    });
-
-    gsap.set(".lines", {
-      yPercent: 100,
-    });
-
-    gsap.set(".char", {
-      yPercent: 100,
-    });
+    gsap.set(".gallery-visual-item", { scale: 0 });
+    gsap.set(".lines", { yPercent: 100 });
+    gsap.set(".char", { yPercent: 100 });
 
     gsap.to(".char", {
       yPercent: 0,
@@ -88,19 +78,26 @@ const Gallery = () => {
       invalidateOnRefresh: true,
     });
 
+    const galleryListImg = gsap.utils.toArray(".gallery-visual-item");
+
     galleryListImg.forEach((listImg) => {
       gsap.to(listImg, {
         scrollTrigger: {
           trigger: listImg,
-          start: "left 100%",
-          end: "+=200",
           containerAnimation: tween,
-          scrub: true,
+          toggleActions: "restart none none reverse",
         },
         scale: 1,
+        duration: 1.5,
         ease: Expo.easeOut,
       });
     });
+
+    return () => {
+      splitMeet.revert();
+      splitOwner.revert();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
