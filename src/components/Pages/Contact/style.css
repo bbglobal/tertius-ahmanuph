@@ -5,11 +5,12 @@
 }
 
 #contact * {
-  color: var(--black) !important;
+  color: var(--white);
 }
 
 button.btn-send {
-  background: var(--dark-beige);
+  background: var(--white);
+  color: var(--light-beige) !important;
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem 0;
@@ -19,14 +20,14 @@ button.btn-send {
 #contact h2 {
   font-family: "Tertius Sans Bold", Helvetica, Arial, sans-serif;
   font-size: clamp(1rem, 1rem + 6.8966vw, 3rem);
-  color: var(--black);
+  color: var(--white);
   font-weight: 600;
 }
 
 #contact p {
   font-size: clamp(1rem, 1rem + 6.8966vw, 1.5rem);
   font-family: "Tertius Sans Normal", Helvetica, Arial, sans-serif;
-  color: var(--black);
+  color: var(--white);
   font-weight: 600;
 }
 

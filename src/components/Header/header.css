@@ -3,14 +3,14 @@ header * {
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #000;
+  color: var(--white);
 }
 
 header {
   height: fit-content;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--white);
   background: var(--light-beige);
   position: sticky;
   z-index: 40;

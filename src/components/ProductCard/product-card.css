@@ -21,9 +21,9 @@
   .plus-icon {
     width: 20px;
     height: 20px;
-    border: 1px solid #000;
+    border: 1px solid var(--white);
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--light-beige);
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
   }
   
   .plus-icon:hover {
-    color: #fff !important;
-    background-color: #000;
+    color: var(--light-beige) !important;
+    background-color: var(--white);
   }
   

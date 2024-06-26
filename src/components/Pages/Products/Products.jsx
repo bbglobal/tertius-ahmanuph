@@ -245,7 +245,7 @@ const Products = () => {
                         </div>
 
                         <div className="sizeguide-table">
-                          <table className="table border border-dark">
+                          <table className="table border border-light">
                             <tbody className="table-body">
                               <tr>
                                 <th>
@@ -332,7 +332,7 @@ const Products = () => {
                   </button>
 
                   <div
-                    className={`position-absolute w-100 border border-dark size-wrapper ${
+                    className={`position-absolute w-100 border border-light size-wrapper ${
                       showSizes ? "d-grid" : "d-none"
                     }`}
                     id="sizes"
@@ -343,7 +343,7 @@ const Products = () => {
                         setSizes("S");
                         setShowSizes(false);
                       }}
-                      className="w-100 position-relative border border-dark border-start-0 border-top-0 all-sizes"
+                      className="w-100 position-relative border border-light border-start-0 border-top-0 all-sizes"
                     >
                       S
                     </button>
@@ -353,7 +353,7 @@ const Products = () => {
                         setSizes("M");
                         setShowSizes(false);
                       }}
-                      className="w-100 position-relative border border-dark border-top-0 border-start-0 border-end-0 all-sizes"
+                      className="w-100 position-relative border border-light border-top-0 border-start-0 border-end-0 all-sizes"
                     >
                       M
                     </button>
@@ -363,7 +363,7 @@ const Products = () => {
                         setSizes("L");
                         setShowSizes(false);
                       }}
-                      className="w-100 border border-dark border-top-0 border-start-0 position-relative all-sizes"
+                      className="w-100 border border-light border-top-0 border-start-0 position-relative all-sizes"
                     >
                       L
                     </button>
@@ -373,7 +373,7 @@ const Products = () => {
                         setSizes("XL");
                         setShowSizes(false);
                       }}
-                      className="w-100 border border-dark border-top-0 border-start-0 border-end-0 position-relative all-sizes"
+                      className="w-100 border border-light border-top-0 border-start-0 border-end-0 position-relative all-sizes"
                     >
                       XL
                     </button>
@@ -383,7 +383,7 @@ const Products = () => {
                         setSizes("XXL");
                         setShowSizes(false);
                       }}
-                      className="w-100 border border-dark border-top-0 border-start-0 border-bottom-0 position-relative all-sizes"
+                      className="w-100 border border-light border-top-0 border-start-0 border-bottom-0 position-relative all-sizes"
                     >
                       XXL
                     </button>

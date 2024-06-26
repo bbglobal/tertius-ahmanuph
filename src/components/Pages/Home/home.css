@@ -1,7 +1,11 @@
 main#home * {
   font-family: "Tertius Sans Normal", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  color: #000;
+  color: var(--white);
+}
+
+.hero-video {
+  width: 100%;
 }
 
 .banner {
@@ -11,7 +15,7 @@ main#home * {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: url("../../../assets/img/hero-img.jpg");
+  /* background: url("../../../assets/img/hero-img.jpg"); */
   transform: scale(1.5);
   transform: rotate(0.001);
   background-size: cover;
@@ -23,7 +27,7 @@ main#home * {
   font-family: "Tertius Sans Bold", Helvetica, Arial, sans-serif !important;
   font-weight: 700;
   font-size: clamp(1rem, 1rem + 6.8966vw, 8rem);
-  color: var(--light-beige) !important;
+  color: var(--white) !important;
   text-align: center;
 }
 
@@ -39,7 +43,7 @@ main#home * {
   font-family: "Tertius Sans Bold", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(1rem, -2.3333rem + 11.1111vw, 3rem);
-  color: #000;
+  color: var(--white);
 }
 
 .span-txt {
@@ -63,14 +67,14 @@ main#home * {
 }
 
 #albums h2 .char{
-  color: var(--black);
+  color: var(--white);
   font-family: "Tertius Sans Bold", Helvetica, Arial, sans-serif;
   font-size: clamp(1rem, 1rem + 6.8966vw, 5rem);
   letter-spacing: 1rem;
 }
 
 #albums .font {
-  color: var(--black);
+  color: var(--white);
   letter-spacing: 3px;
   font-family: "Tertius Sans Italic", Helvetica, Arial, sans-serif;
   font-size: clamp(1rem, 1rem + 6.8966vw, 1.3rem);
@@ -78,7 +82,7 @@ main#home * {
 }
 
 #albums .head ul {
-  border-bottom: solid 1px var(--black);
+  border-bottom: solid 1px var(--white);
   cursor: pointer;
   margin-bottom: 1rem;
 }
@@ -154,13 +158,13 @@ main#home * {
 
 .wvc-album-disc-cd .wvc-album-disc-disc-container {
   position: relative;
-  top: 14px;
+  top: 20px;
   left: 14px;
   width: calc(100% - 28px);
   height: calc(100% - 28px);
   border-radius: 50%;
-  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.66),
-    0px 0px 0px 5px rgba(0, 0, 0, 0.22), 0px 0px 0px 3px rgba(0, 0, 0, 0.88);
+  box-shadow: inset 0px 0px 4px 1px rgba(255, 255, 255, 0.66),
+    0px 0px 0px 5px rgba(255, 255, 255, 0.22), 0px 0px 0px 3px rgba(255, 255, 255, 0.88);
 }
 
 .wvc-album-disc-disc-container {
@@ -190,21 +194,6 @@ main#home * {
 
 #home img {
   max-width: 100%;
-  height: auto;
-}
-
-.wvc-album-disc-disc-text {
-  z-index: 5;
-  position: absolute;
-  width: calc(100% - 5px);
-  height: calc(100% - 5px);
-  top: 5px;
-  left: 5px;
-  background: transparent url("../../../assets/img/cd-disc-circular-text.png") left top no-repeat;
-  transform: translate3d(0, 0, 0);
-  background-size: cover;
-  opacity: 0.88;
-  margin: -2px;
 }
 
 .wvc-album-disc-disc-hole {
@@ -215,9 +204,9 @@ main#home * {
   transform: translate3d(-50%, -50%, 0);
   height: 32.5%;
   width: 32.5%;
-  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.99);
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.99);
   z-index: 2;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.35);
   border-radius: 50%;
 }
 
@@ -234,8 +223,8 @@ main#home * {
 }
 
 .head li.active {
-  background-color: var(--dark-beige);
-  color: var(--light-beige);
+  background-color: var(--white);
+  color: var(--light-beige) !important;
 }
 
 .imageContainer {

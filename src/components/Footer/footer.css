@@ -3,12 +3,12 @@ footer * {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: var(--black);
+  color: var(--white);
 }
 
 footer {
   background: var(--light-beige);
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--white);
   height: 11rem;
   padding-top: 1.5rem;
   padding-bottom: 4rem;
@@ -19,7 +19,7 @@ footer h2 {
   font-family: "Tertius Sans Bold", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: clamp(1rem, -2.3333rem + 11.1111vw, 3rem);
-  color: var(--black);
+  color: var(--white);
   margin-bottom: 2.5rem;
 }
 
@@ -51,8 +51,8 @@ footer h2 {
 
 .border-black {
   --tw-border-opacity: 1;
-  border-color: #000;
-  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+  border-color: var(--white);
+  border-color: rgba(225, 225, 225, var(--tw-border-opacity));
 }
 
 .border {

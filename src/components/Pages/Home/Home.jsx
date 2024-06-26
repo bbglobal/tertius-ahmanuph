@@ -4,11 +4,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { Expo, gsap } from "gsap";
-import cdCover from "../../../assets/img/cd-cover.jpg";
-import cd from "../../../assets/img/cd.jpg";
 import albumOne from "../../../assets/img/album_1.jpg";
 import albumTwo from "../../../assets/img/album_2.jpg";
 import albumThree from "../../../assets/img/album_3.jpg";
+import heroVedio from "../../../assets/img/hero-vedio.MP4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SplitType from "split-type";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -87,22 +86,30 @@ const Home = () => {
       delay: 1,
       duration: 0.5,
       stagger: 0.05,
-    })
+    });
   }, []);
 
   return (
     <>
       <main id="home">
         <section ref={hero} id="hero-section" className="banner">
-          <div className="hero-txt-container">
+          <video
+            src={heroVedio}
+            controls
+            autoPlay
+            loop
+            className="hero-video"
+          ></video>
+
+          {/* <div className="hero-txt-container">
             <h1 ref={herotxt}>Tertius AhmaNuph</h1>
           </div>
           <div className="span-txt">
             <h2 ref={spanTxt}>New Album Out Now</h2>
-          </div>
+          </div> */}
         </section>
 
-        <section id="albums">
+        <section id="albums" className="pt-5">
           <div className="pt-5">
             <div className="album-txt-wrapper">
               <h2 className="text-center" ref={albums}>
@@ -111,7 +118,7 @@ const Home = () => {
             </div>
 
             <p className="text-center font">
-              Single and all music albums released between year and year!
+              Single and all music albums released
             </p>
 
             <Container fluid>
@@ -137,13 +144,12 @@ const Home = () => {
                                 <img
                                   decoding="async"
                                   className="wvc-album-disc-disc-img"
-                                  src={cd}
-                                  width="375"
-                                  height="375"
+                                  src={albumOne}
+                                  width="450"
+                                  height="450"
                                   alt="image"
                                   loading="lazy"
                                 />
-                                <div className="wvc-album-disc-disc-text" />
                               </div>
                               <div className="wvc-album-disc-disc-hole"></div>
                             </div>
@@ -152,9 +158,9 @@ const Home = () => {
                             <img
                               decoding="async"
                               className="wvc-album-disc-cover-img"
-                              src={cdCover}
-                              width="375"
-                              height="375"
+                              src={albumOne}
+                              width="550"
+                              height="500"
                               alt="cd-cover"
                               title="cd-cover"
                               loading="lazy"
@@ -204,24 +210,84 @@ const Home = () => {
                     </ul>
 
                     <p className={activeTab === "story" ? "" : "d-none"}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ducimus autem esse porro ipsa odit cum, maxime nisi itaque
-                      eius sit magni magnam quis molestias cumque, dignissimos
-                      quos qui aliquid blanditiis.
+                      <ol>
+                        <li>
+                          “Get This Way” <br />
+                          About wanting a lover to hear one’s cry for
+                          companionship & the willingness to face all feats to
+                          have & maintain it.
+                        </li>
+                        <br />
+                        <li>
+                          “3am On Jan 31st” <br />
+                          About wanting to be recognized as more than just an
+                          ex-lover who one talks to about loneliness & normal
+                          people issues, even though one side feels wrong
+                          overall.
+                        </li>
+                        <br />
+                        <li>
+                          “Lonely Homes” <br />
+                          About recognizing the lack of companionship in a
+                          genuine form. Feeling disconnected from the world
+                          willingly & unwillingly; setting oneself apart.
+                          Emptiness within a place meant to be full & lively.
+                          Shaderah
+                        </li>
+                      </ol>
                     </p>
 
                     <p className={activeTab === "concept" ? "" : "d-none"}>
-                      blanditiis ipsum dolor sit amet consectetur adipisicing
-                      elit. Ducimus autem esse porro ipsa odit cum, maxime nisi
-                      itaque eius sit magni magnam quis molestias cumque,
-                      dignissimos quos qui aliquid blanditiis.
+                      <ol>
+                        <li>
+                          “Get This Way” <br />
+                          Written while traveling long lonely drives for work as
+                          a CDL professional, the song is a representation of
+                          the reality of wanting a good partner & the
+                          willingness to maintain a good relationship behavior.
+                          Based upon past failed relationship experiences with
+                          others.
+                        </li>
+                        <br />
+                        <li>
+                          “3am On Jan 31st” <br />
+                          Stemming from a late night conversation with an
+                          ex-lover during what some people call “scary hours” in
+                          hopes to soothe human urges through another person.
+                        </li>
+                        <br />
+                        <li>
+                          “Lonely Homes” <br />
+                          Came from a larger project being written, mainly to be
+                          seen as a piece of said project in regard to how
+                          Shaderah was feeling throughout her to date life.
+                        </li>
+                      </ol>
                     </p>
 
                     <p className={activeTab === "sound" ? "" : "d-none"}>
-                      ipsum Lorem dolor sit amet consectetur adipisicing elit.
-                      Ducimus autem esse porro ipsa odit cum, maxime nisi itaque
-                      eius sit magni magnam quis molestias cumque, dignissimos
-                      quos qui aliquid blanditiis.
+                      <ol>
+                        <li>
+                          “Get This Way” <br />
+                          consectetur iste maxime natus repellat ad recusandae
+                          laboriosam laborum nesciunt consequatur dolore
+                          quisquam dolores tenetur ab.
+                        </li>
+                        <br />
+                        <li>
+                          “3am On Jan 31st” <br />
+                          consectetur iste maxime natus repellat ad recusandae
+                          laboriosam laborum nesciunt consequatur dolore
+                          quisquam dolores tenetur ab.
+                        </li>
+                        <br />
+                        <li>
+                          “Lonely Homes” <br />
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Aliquid dolorem pariatur blanditiis? Velit
+                          molestiae,
+                        </li>
+                      </ol>
                     </p>
                   </div>
                 </Col>

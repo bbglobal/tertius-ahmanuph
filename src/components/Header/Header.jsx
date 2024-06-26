@@ -3,7 +3,7 @@ import logo from "../../logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const Header = ({ toggleCart }) => {
+const Header = ({ toggleCart, toggleAlbums }) => {
   const [isHeader, setIsHeader] = useState(false);
   const [totalQuantity, setTotalQuantity] = useState(0);
 
@@ -15,18 +15,8 @@ const Header = ({ toggleCart }) => {
     setTotalQuantity(total);
   };
 
-  const scrollToAlbums = () => {
-    setTimeout(() => {
-      const albumsSection = document.getElementById("albums");
-      if (albumsSection) {
-        albumsSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
-  };
-
   useEffect(() => {
-
-    console.log(pathname)
+    console.log(pathname);
     updateCartQuantity();
 
     const handleStorageChange = () => {
@@ -38,15 +28,16 @@ const Header = ({ toggleCart }) => {
     return () => {
       window.removeEventListener("storage", handleStorageChange);
     };
-
   }, [pathname]);
-
 
   return (
     <>
       <header
         id="main-menu"
-        className={`d-flex align-items-center justify-content-between ${pathname == "/room" ? "room__header" : ""}`}>
+        className={`d-flex align-items-center justify-content-between ${
+          pathname == "/room" ? "room__header" : ""
+        }`}
+      >
         <nav>
           <ul className="d-flex align-items-center">
             <li>
@@ -58,9 +49,7 @@ const Header = ({ toggleCart }) => {
               <NavLink to={`/about`}>About</NavLink>
             </li>
             <li>
-              <NavLink to={"/#albums"} onClick={() => scrollToAlbums()}>
-                Albums
-              </NavLink>
+              <button onClick={toggleAlbums}>Albums</button>
             </li>
             <li>
               <NavLink to={`/gallery`}>Gallery</NavLink>
@@ -73,7 +62,14 @@ const Header = ({ toggleCart }) => {
             </li>
           </ul>
         </nav>
-        <button className={`${pathname === "/shop-all" || /products\/.*$/.test(pathname) ? "d-block" : "d-none"}`} onClick={toggleCart}>
+        <button
+          className={`${
+            pathname === "/shop-all" || /products\/.*$/.test(pathname)
+              ? "d-block"
+              : "d-none"
+          }`}
+          onClick={toggleCart}
+        >
           Cart ( {totalQuantity} )
         </button>
       </header>

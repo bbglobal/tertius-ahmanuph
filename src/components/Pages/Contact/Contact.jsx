@@ -68,8 +68,8 @@ const Contact = () => {
               </div>
               <div className="p-txt-container">
                 <div>
-                  <a href="mailto:thirddim9nsion@gmail.com">
-                    thirddim9nsion@gmail.com
+                  <a href="mailto:tertiusdim9nsion@gmail.com">
+                    tertiusdim9nsion@gmail.com
                   </a>
                 </div>
               </div>
@@ -84,22 +84,34 @@ const Contact = () => {
             </p>
             <br />
             <br />
-            <address>7532 Walnutwood Ave.</address> <br />
-            <a href="mailto:thirddim9nsion@gmail.com">thirddim9nsion@gmail.com</a> <br />
-            <a href="tel:+88 (0) 101 0000">+88 (0) 101 0000</a> <br />
+            <address>PO Box 15156, Savannah Georgia 31416</address> <br />
+            <a href="mailto:tertiusdim9nsion@gmail.com">
+            tertiusdim9nsion@gmail.com
+            </a>{" "}
+            <br />
+            <a href="tel:912-323-0129">912-323-0129</a> <br />
             <ul className="d-flex align-items-center justify-content-start mt-5">
               <li>
-                <a href="https://www.instagram.com/shaderahdeyal?igsh=MW91OG5ndmJiaTlxZA%3D%3D&utm_source=qr" target="_blank">
+                <a
+                  href="https://www.instagram.com/shaderahdeyal?igsh=MW91OG5ndmJiaTlxZA%3D%3D&utm_source=qr"
+                  target="_blank"
+                >
                   <img src={fb} alt="icon" width={30} />
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/share/VhvQaeAjtwL1W9o2/?mibextid=LQQJ4d" target="_blank">
+                <a
+                  href="https://www.facebook.com/share/VhvQaeAjtwL1W9o2/?mibextid=LQQJ4d"
+                  target="_blank"
+                >
                   <img src={insta} alt="icon" width={30} />
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/@shaderahdeyal?_t=8mgHauBCkuM&_r=1" target="_blank">
+                <a
+                  href="https://www.tiktok.com/@shaderahdeyal?_t=8mgHauBCkuM&_r=1"
+                  target="_blank"
+                >
                   <img src={tiktok} alt="icon" width={30} />
                 </a>
               </li>
